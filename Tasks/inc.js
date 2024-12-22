@@ -5,9 +5,8 @@
 const incNumbers = (variables) => {
   const result = {};
   for (const element of Object.keys(variables)) {
-    if ((typeof variables[element]).charAt(0).toUpperCase() === 'N') {
-      variables[element] = variables[element] + 1;
-    }
+    const value = variables[element];
+    result[element] = typeof value === 'number' ? value + 1 : value;
   }
   return result;
 };
