@@ -1,8 +1,8 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-const sum = (s = () => {}) => {
-  sum = [0];
+const sum = (arr = 0) => {
+  let result = 0;
   for (i of s) {
     let t = typeof i;
     if (t === 'number') {
@@ -13,7 +13,7 @@ const sum = (s = () => {}) => {
     }
   }
   sum[0];
-  return sum[sum.length - 1];
+  return result;
 };
 
 module.exports = sum;
