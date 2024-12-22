@@ -1,7 +1,7 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-const sum = function (s = () => {}) {
+const sum = (s = () => {}) => {
   sum = [0];
   for (i of s) {
     let t = typeof i;
