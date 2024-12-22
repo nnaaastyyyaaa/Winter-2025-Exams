@@ -3,8 +3,8 @@
 
 const sum = (arr = 0) => {
   let result = 0;
-  for (i of s) {
-    let t = typeof i;
+  for (const element of arr) {
+    let t = typeof element;
     if (t === 'number') {
       if (sum.length > 0) {
         const new_Sum = sum[sum.length - 1] + i;
