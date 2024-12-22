@@ -4,15 +4,10 @@
 const sum = (arr = 0) => {
   let result = 0;
   for (const element of arr) {
-    let t = typeof element;
-    if (t === 'number') {
-      if (sum.length > 0) {
-        const new_Sum = sum[sum.length - 1] + i;
-        sum.push(new_Sum);
-      }
+    if (typeof element === 'number') {
+      result += element;
     }
   }
-  sum[0];
   return result;
 };
 
