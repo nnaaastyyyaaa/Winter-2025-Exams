@@ -4,7 +4,7 @@
 
 const incNumbers = (variables) => {
   const result = {};
-  for (const element in variables) {
+  for (const element of Object.keys(variables)) {
     if ((typeof variables[element]).charAt(0).toUpperCase() === 'N') {
       variables[element] = variables[element] + 1;
     }
