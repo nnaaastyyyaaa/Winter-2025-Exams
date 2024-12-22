@@ -3,12 +3,13 @@
 'use strict';
 
 const incNumbers = (variables) => {
+  const result = {};
   for (const element in variables) {
     if ((typeof variables[element]).charAt(0).toUpperCase() === 'N') {
       variables[element] = variables[element] + 1;
     }
   }
-  return variables;
+  return result;
 };
 
 module.exports = incNumbers;
