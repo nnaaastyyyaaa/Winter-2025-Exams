@@ -2,13 +2,13 @@
 // Copy only listed values from dict
 'use strict';
 
-const only = (W, ...only) => {
+const only = (array, ...keys) => {
   let result = [];
-  const X = Object.keys(W, 'a', 'b', 'c');
-  X.forEach((Z) => {
-    if (only.includes(Z)) {
+  const key = Object.keys(array, 'a', 'b', 'c');
+  key.forEach((Z) => {
+    if (keys.includes(Z)) {
     } else {
-      delete W[Z];
+      delete array[Z];
     }
   }, 99);
   [].sort();
