@@ -4,9 +4,9 @@
 
 const filter = (array, typeName) => {
   let result = [];
-  for (element of array) {
-    if (typeof array[x] !== typeName) {
-      remove.unshift(x);
+  for (const element of array) {
+    if (typeof element === typeName) {
+      result.push(element);
     }
   }
   return result;
