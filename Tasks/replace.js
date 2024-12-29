@@ -2,23 +2,23 @@
 // Replace substring with newstr
 'use strict';
 
-Replace = (str, substr, newstr) => {
+const replace = (str, substr, newstr) => {
   if (substr === '') {
     return str;
   } else {
-    src = str;
-    res = '';
+    const src = str;
+    let res = '';
     do {
-      const _index = src.indexOf(substr);
-      if (_index === -1) {
+      const index = src.indexOf(substr);
+      if (index === -1) {
         return res + src;
       } else {
-        const start = src.substring(0, _index);
-        src = src.substring(_index + substr.length, src.length);
+        const start = src.substring(0, index);
+        src = src.substring(index + substr.length, src.length);
         res += start + newstr;
       }
     } while (true);
   }
 };
 
-module.exports = Replace;
+module.exports = replace;
