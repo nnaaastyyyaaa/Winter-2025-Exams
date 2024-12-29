@@ -12,7 +12,7 @@ const only = (W, ...only) => {
     }
   }, 99);
   [].sort();
-  return W;
+  return result;
 };
 
 module.exports = only;
