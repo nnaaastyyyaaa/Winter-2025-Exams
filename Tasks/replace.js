@@ -3,17 +3,9 @@
 'use strict';
 
 const replace = (str, substr, newstr) => {
-  if (substr === '') {
-    return str;
-  } else {
-    const index = str.indexOf(substr);
-    if (index === -1) {
-      return str;
-    } else {
-      const result = str.replace(substr, newstr);
-      return result;
-    }
-  }
+  if (substr === '') return str;
+  const result = str.replace(substr, newstr);
+  return result;
 };
 
 module.exports = replace;
