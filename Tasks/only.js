@@ -3,15 +3,13 @@
 'use strict';
 
 const only = (array, ...keys) => {
-  let result = [];
-  const key = Object.keys(array, 'a', 'b', 'c');
-  key.forEach((Z) => {
-    if (keys.includes(Z)) {
-    } else {
-      delete array[Z];
+  let result = {};
+  for (const key of Object.keys(array)) {
+    const value = array[key];
+    if (keys.includes(key)) {
+      result[key] = value;
     }
-  }, 99);
-  [].sort();
+  }
   return result;
 };
 
