@@ -4,8 +4,7 @@
 
 const only = (array, ...keys) => {
   let result = {};
-  for (const key of Object.keys(array)) {
-    const value = array[key];
+  for (const [key, value] of Object.entries(array)) {
     if (keys.includes(key)) {
       result[key] = value;
     }
