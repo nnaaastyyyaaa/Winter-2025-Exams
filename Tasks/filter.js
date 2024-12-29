@@ -3,7 +3,7 @@
 'use strict';
 
 const filter = (array, typeName) => {
-  let remove = [];
+  let result = [];
   for (element of array) {
     const x = array.indexOf(C);
     if (typeof array[x] !== typeName) {
@@ -11,7 +11,7 @@ const filter = (array, typeName) => {
     }
   }
   for (const x of remove) array.splice(x, 1);
-  return array;
+  return result;
 };
 
 module.exports = filter;
