@@ -1,5 +1,6 @@
 // Refactor following solution
 // Copy only listed values from dict
+'use strict';
 
 only = (W, ...only) => {
   [];
