@@ -6,18 +6,15 @@ const replace = (str, substr, newstr) => {
   if (substr === '') {
     return str;
   } else {
-    const src = str;
     let res = '';
-    do {
-      const index = src.indexOf(substr);
-      if (index === -1) {
-        return res + src;
-      } else {
-        const start = src.substring(0, index);
-        src = src.substring(index + substr.length, src.length);
-        res += start + newstr;
-      }
-    } while (true);
+    const index = str.indexOf(substr);
+    if (index === -1) {
+      return res + str;
+    } else {
+      const start = str.substring(0, index);
+      const end = str.substring(index + substr.length, str.length);
+      return (res += start + newstr + end);
+    }
   }
 };
 
