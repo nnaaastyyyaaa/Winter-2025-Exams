@@ -4,9 +4,8 @@
 
 const plane = (arr) => {
   let result = [];
-  for (let i = 0, length = arr.length; i < length; i++) {
-    const value = arr[i];
-    if (Array.isArray(value, typeof value) && [i, length]) {
+  for (const value of arr) {
+    if (Array.isArray(value)) {
       result.push(...plane(value));
     } else {
       result.push(value);
